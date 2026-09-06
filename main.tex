@@ -1,0 +1,925 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\setbeamertemplate{navigation symbols}{}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    citecolor=black
+}
+\setbeamercolor{bibliography entry author}{fg=black}
+\setbeamercolor{bibliography entry title}{fg=black}
+\setbeamercolor{bibliography entry location}{fg=black}
+\setbeamercolor{bibliography entry note}{fg=black}
+\setbeamercolor{bibliography entry}{fg=black}
+
+\definecolor{myskin}{RGB}{245,245,220}   
+\setbeamercolor{title}{fg=Black,bg=myskin}
+\setbeamercolor{frametitle}{fg=Black,bg=myskin}
+\setbeamercolor{structure}{fg=myskin}
+
+% Increase title size
+\setbeamerfont{title}{size=\Huge,series=\bfseries}
+\setbeamerfont{subtitle}{size=\Large}
+\setbeamerfont{author}{size=\Large}
+\setbeamerfont{institute}{size=\normalsize}
+\setbeamerfont{date}{size=\large}
+
+% Presentation details
+\title{Mathematics for Computing}
+\subtitle{Assignment - Report \& Module 3}
+
+\author{Anlin Davis}
+
+\institute{M.Tech AI \& SE}
+\date{}   % Removes the date
+\setbeamertemplate{footline}{}
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\section{Introduction}
+\begin{frame}{A Report on Official Statistical Machinery}
+\item \textbf{ ? Prepare a report on the activities and functions of the Department of Statistics under the Government of Kerala and the Government of India, with a maximum length of 500 words.}
+\vspace{.8 cm}
+\item \textbf{Official Statistics - Introduction}
+\vspace{.5 cm}
+\begin{itemize}
+\item Statistics play an important role in government administration, economic planning, policy formulation and evaluation of development programmes.
+\item In India, statistical activities are carried out at both the State and Central levels. The Department of Economics and Statistics (DES) is the nodal agency for official statistics in Kerala, while the Ministry of Statistics and Programme Implementation (MoSPI) is the nodal ministry for the development and coordination of the statistical system at the national level.
+\end{itemize}
+\end{frame}
+\begin{frame}{Department of Economics and Statistics, Government of Kerala}
+\begin{itemize}
+ \item The Department of Economics and Statistics is responsible for the systematic collection, compilation, analysis, interpretation and dissemination of statistical information relating to Kerala's economy. It provides reliable data required for planning and evidence-based decision-making.
+
+ \item Major activities of the department include the collection of demographic and vital statistics, agricultural statistics, industrial statistics, price statistics, labour and housing statistics, and state income estimates. It conducts sample surveys, agricultural surveys, the Annual Survey of Industries and various ad-hoc surveys and studies. The department also prepares estimates of Gross State Domestic Product (GSDP) and district income.
+
+ \item The department publishes important statistical reports such as the Statistical Handbook, Panchayat Level Statistics, Gender Statistics, Infrastructure Statistics and Environmental Statistics. It also provides statistical dashboards and data portals for public access. The department has a Directorate, 14 District Statistical Offices, 61 Taluk Statistical Offices and statistical cells in various government departments.
+\end{itemize}
+\end{frame}
+\begin{frame}{Statistical System of the Government of India}
+\begin{itemize}
+ \item At the national level, the Ministry of Statistics and Programme Implementation (MoSPI) coordinates and develops India's official statistical system. Its Statistics Wing, functioning through the National Statistical Office (NSO), conducts large-scale surveys and produces important national statistics.
+
+\item Major activities include the Periodic Labour Force Survey (PLFS), Household Consumption Expenditure Survey (HCES), Annual Survey of Industries (ASI), Annual Survey of Unincorporated Sector Enterprises (ASUSE), and other socio-economic surveys. MoSPI also compiles National Accounts Statistics, including Gross Domestic Product (GDP), and important price statistics such as the Consumer Price Index (CPI) and Index of Industrial Production (IIP).
+
+\item MoSPI develops the National Indicator Framework for monitoring Sustainable Development Goals (SDGs). Its Programme Implementation Wing monitors major central sector projects and the Members of Parliament Local Area Development Scheme (MPLADS).
+\end{itemize}
+\end{frame}
+\begin{frame}{Conclusion}
+    
+Thus, statistical departments at both State and Central levels provide essential data for planning, resource allocation, policy formulation and evaluation. Kerala's Department of Economics and Statistics focuses on state-level statistical requirements, while MoSPI coordinates and produces national-level statistics. Together, they support evidence-based governance and socio-economic development.
+
+\color{black}
+\begin{thebibliography}{9}
+
+\bibitem{kerala}
+Department of Economics and Statistics, Government of Kerala,
+\url{https://www.ecostat.kerala.gov.in/}
+
+\bibitem{mospi}
+Ministry of Statistics and Programme Implementation, Government of India,
+\url{https://www.mospi.gov.in/}
+
+\end{thebibliography}
+\end{frame}
+
+\begin{frame}
+    \centering
+    \vfill
+    {\Huge \textbf{Module 3}}
+\end{frame}
+\begin{frame}{Descriptive Statistics}
+
+Descriptive statistics is the branch of statistics concerned with collecting, organizing, summarizing and presenting data in a meaningful way.It helps to transform large amounts of raw data into a form that is easier to understand and interpret. It uses numerical measures such as the mean, variance, and covariance as well as graphical methods such as histograms, to summarize the important characteristics of data.
+
+The major objectives are:
+
+\begin{itemize} 
+\item To describe the central tendency of data. 
+\item To measure the variability or spread of data. \item To understand the distribution and pattern of observations.
+\item To identify relationships between different variables. 
+\item To present data using tables, graphs and numerical measures. 
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{Histogram}
+
+
+A \textbf{histogram} is a graphical representation of the distribution
+of numerical data.
+
+The data is divided into intervals called \textbf{bins} or
+\textbf{class intervals}. The frequency of observations in each
+interval is represented by the height of a bar.
+
+\subsubsection*{Example}
+
+Suppose the marks of 10 students are:
+
+\[
+45,\;50,\;52,\;55,\;60,\;62,\;65,\;70,\;75,\;80
+\]
+
+The data can be grouped as follows:
+
+\begin{center}
+\begin{tabular}{cc}
+\toprule
+\textbf{Marks} & \textbf{Frequency}\\
+\midrule
+40--49 & 1\\
+50--59 & 3\\
+60--69 & 3\\
+70--79 & 2\\
+80--89 & 1\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+A histogram represents these frequencies using adjacent rectangular
+bars.
+\end{frame}
+
+
+
+\begin{frame}{Sample Mean}
+
+
+The \textbf{sample mean} is the arithmetic average of all observations
+in a sample.The sample mean is often used to estimate the population mean $\mu$.Let the sample be
+\vspace{0.0 cm}
+\[
+X_1,X_2,\ldots,X_n.
+\]
+
+The sample mean is given by
+\vspace{0.0 cm}
+\[
+\boxed{
+\bar{X}=\frac{1}{n}\sum_{i=1}^{n}X_i
+}
+\]
+
+
+
+\begin{itemize}
+    \item where : $\bar{X}$ - sample mean ,$X_i$ - $i$th observation ,$n$ - sample size.
+\end{itemize}
+
+\subsubsection*{Example}
+
+Consider the sample:\vspace{0cm}
+\[
+10,\;20,\;30,\;40,\;50
+\]
+\vspace{0.0cm}
+\[
+n=5, Therefore,
+\]
+\vspace{0.0cm}
+\[
+\bar{X}
+=
+\frac{10+20+30+40+50}{5}
+=30\]
+
+
+\end{frame}
+
+\begin{frame}{Sample Variance}
+
+
+\textbf{Sample variance} measures how much the observations in a sample
+vary around the sample mean.The sample variance is
+\vspace{0.0 cm}
+\[
+\boxed{
+S^2=
+\frac{1}{n-1}
+\sum_{i=1}^{n}(X_i-\bar{X})^2
+}
+\]
+
+% The use of $n-1$ instead of $n$ makes the sample variance an unbiased
+% estimator of the population variance under standard assumptions.
+
+\subsubsection*{Example}
+
+Consider the sample:
+\vspace{0.0 cm}
+\[
+10,\;20,\;30
+\]
+\[sample\; mean \;
+\bar{X}=20.
+\]
+\vspace{0.0 cm}
+The deviations from the mean are
+\vspace{0.0 cm}
+\[
+10-20=-10,\;
+20-20=0,\;
+30-20=10.
+\]
+\vspace{0.0 cm}
+The squared deviations are
+\vspace{0.0 cm}
+\[
+100,\;0,\;100.
+\]
+\vspace{0.0 cm}
+Therefore,
+\vspace{0.0 cm}
+\[
+S^2=
+\frac{100+0+100}{3-1}=100
+\]
+\end{frame}
+
+
+\begin{frame}{Order Statistics}
+
+
+\textbf{Order statistics} are the observations of a sample arranged in
+increasing or decreasing order.
+
+Suppose the original sample is
+\vspace{0.0 cm}
+\[
+7,\;2,\;9,\;4,\;5.
+\]
+
+After arranging the observations in ascending order:
+\vspace{0.0 cm}
+\[
+2,\;4,\;5,\;7,\;9.
+\]
+
+The ordered observations are denoted by
+\vspace{0.0 cm}
+\[
+X_{(1)},X_{(2)},\ldots,X_{(n)}.
+\]
+
+Here,
+
+\begin{itemize}
+    \item $X_{(1)}$ - smallest observation, $X_{(n)}$ - largest observation.
+\end{itemize}
+
+\subsubsection*{Important Order Statistics}
+
+The minimum is
+\vspace{0.0 cm}
+\[
+\boxed{X_{(1)}}
+\]
+
+and the maximum is
+\vspace{0.0 cm}
+\[
+\boxed{X_{(n)}}.
+\]
+\end{frame}
+\begin{frame}
+For an odd number of observations, the median is
+
+\[
+\boxed{
+X_{\left(\frac{n+1}{2}\right)}
+}
+\]
+
+
+\subsubsection*{Example}
+
+Consider
+
+\[
+3,\;8,\;2,\;10,\;5.
+\]
+
+Ordered data:
+
+\[
+2,\;3,\;5,\;8,\;10.
+\]
+
+Therefore:
+
+\begin{itemize}
+    \item Minimum = $2$
+    \item Median = $5$
+    \item Maximum = $10$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Sample Covariance}
+
+\textbf{Covariance} measures the direction of the relationship between
+two variables.
+
+Suppose we have two variables
+\vspace{0.0 cm}
+\[
+X=(X_1,X_2,\ldots,X_n)
+\]
+\vspace{0.0 cm}
+and
+\vspace{0.0 cm}
+\[
+Y=(Y_1,Y_2,\ldots,Y_n).
+\]
+\vspace{0.0 cm}
+The sample covariance is
+\vspace{0.0 cm}
+\[
+\boxed{
+S_{XY}
+=
+\frac{1}{n-1}
+\sum_{i=1}^{n}
+(X_i-\bar{X})(Y_i-\bar{Y})
+}
+\]
+\vspace{0.0 cm}
+where $\bar{X}$ and $\bar{Y}$ are the sample means.
+
+\subsubsection*{Interpretation}
+
+\begin{center}
+\begin{tabular}{p{3cm}p{8cm}}
+\toprule
+\textbf{Covariance} & \textbf{Interpretation}\\
+\midrule
+Positive & $X$ and $Y$ tend to increase together.\\
+Negative & When one variable increases, the other tends to decrease.\\
+Approximately zero & There is little or no linear relationship.\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{frame}
+\begin{frame}{Sample Covariance Example}
+
+Suppose:
+
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+ & $X$ & $Y$\\
+\midrule
+1 & 1 & 2\\
+2 & 2 & 4\\
+3 & 3 & 6\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+As $X$ increases, $Y$ also increases.
+\item Therefore, the covariance is
+positive.
+
+\textbf{Note:} Covariance indicates the direction of a relationship,
+but its magnitude depends on the units of measurement.
+\end{frame}
+
+\begin{frame}{Sample Covariance Matrix}
+
+When there are more than two variables, their variances and covariances
+can be represented using a \textbf{sample covariance matrix}.
+
+For three variables $X$, $Y$, and $Z$, the covariance matrix is
+
+\[
+\boxed{
+S=
+\begin{bmatrix}
+S_X^2 & S_{XY} & S_{XZ}\\
+S_{YX} & S_Y^2 & S_{YZ}\\
+S_{ZX} & S_{ZY} & S_Z^2
+\end{bmatrix}
+}
+\]
+
+The diagonal elements represent variances, while the off-diagonal
+elements represent covariances.
+
+\subsubsection*{Example}
+
+Consider the covariance matrix
+
+\[
+S=
+\begin{bmatrix}
+4 & 2 & 1\\
+2 & 9 & 3\\
+1 & 3 & 16
+\end{bmatrix}.
+\]
+\end{frame}
+Here:
+
+\begin{itemize}
+    \item Variance of $X$ = $4$
+    \item Variance of $Y$ = $9$
+    \item Variance of $Z$ = $16$
+    \item Covariance between $X$ and $Y$ = $2$
+    \item Covariance between $X$ and $Z$ = $1$
+    \item Covariance between $Y$ and $Z$ = $3$
+\end{itemize}
+
+\subsubsection*{Properties}
+
+A covariance matrix is:
+
+\begin{itemize}
+    \item Square
+    \item Symmetric
+    \item Positive semi-definite
+    \item Characterized by variances on its diagonal
+    \item Characterized by covariances off its diagonal
+\end{itemize}
+
+
+\newpage
+\begin{frame}{Frequentist Statistics}
+
+
+\textbf{Frequentist statistics} is an approach to statistical inference that uses sample data to make conclusions about unknown characteristics of a population. In this approach, population parameters such as the mean and variance are considered fixed but unknown quantities, while the sample data and statistics calculated from the sample are treated as random.
+\item The main purpose is to estimate population parameters, test statistical hypotheses and quantify the uncertainty associated with statistical estimates.  
+\item The major objectives are: \begin{itemize} 
+\item To obtain information about a population from sample data. 
+\item To measure the accuracy and reliability of estimators. 
+\item To construct confidence intervals for population parameters. 
+\item To study the properties of statistical estimators.
+\item To make decisions and conclusions based on sample evidence. \end{itemize}
+\end{frame}
+
+\begin{frame}{Sampling}
+
+
+\textbf{Sampling} is the process of selecting a subset of observations
+from a larger population.
+
+\subsubsection*{Population}
+\begin{itemize}
+    \item A \textbf{population} is the complete group of individuals or
+observations being studied.
+
+\subsubsection*{Sample}
+
+     \item A \textbf{sample} is a smaller group selected from the population.
+\end{itemize}
+\subsubsection*{Example}
+
+Suppose a college has 5,000 students. If 200 students are selected for
+a survey:
+
+\begin{itemize}
+    \item Population = 5,000 students
+    \item Sample = 200 students
+\end{itemize}
+
+The objective is to use the sample information to draw conclusions
+about the population.
+
+\subsubsection*{Types of Sampling}
+
+\paragraph{\textbf{1. Simple Random Sampling}}
+
+Every member of the population has an equal probability of being
+selected.
+
+\paragraph{\textbf{2. Stratified Sampling}}
+
+The population is divided into groups called strata, and samples are
+taken from each stratum.
+
+\paragraph{\textbf{3. Systematic Sampling}}
+
+Individuals are selected at regular intervals, such as every $k$th
+individual.
+
+\paragraph{\textbf{4. Cluster Sampling}}
+
+The population is divided into clusters, and some clusters are selected
+for study.
+\end{frame}
+
+\begin{frame}{Mean Square Error}
+
+
+\textbf{Mean Square Error (MSE)} measures the average squared difference
+between an estimator and the true population parameter.For an estimator $\hat{\theta}$ of a parameter $\theta$:
+\vspace{0.0 cm}
+\[
+\boxed{
+MSE(\hat{\theta})
+=
+E[(\hat{\theta}-\theta)^2]
+}
+\]
+
+MSE can be decomposed into variance and squared bias:
+\vspace{0.0 cm}
+\[
+\boxed{
+MSE(\hat{\theta})
+=
+\operatorname{Var}(\hat{\theta})
++
+\left[\operatorname{Bias}(\hat{\theta})\right]^2
+}
+\]
+
+where
+\vspace{0.0 cm}
+\[
+\operatorname{Bias}(\hat{\theta})
+=
+E[\hat{\theta}]-\theta.
+\]
+
+\subsubsection*{Example}
+
+Suppose an estimator has
+\vspace{0.0 cm}
+\[
+\operatorname{Var}(\hat{\theta})=4 \:
+and
+\:\operatorname{Bias}(\hat{\theta})=2.
+\]
+
+Then
+\vspace{0.0 cm}
+\[
+MSE=4+2^2 =8
+\]
+\vspace{0.0 cm}
+A smaller MSE indicates that is closer to the true parameter in squared-error terms.
+\end{frame}
+%=========================================================
+\begin{frame}{Consistency}
+%=========================================================
+
+An estimator is called \textbf{consistent} if it gets closer to the
+true population parameter as the sample size increases.
+
+Suppose $\hat{\theta}_n$ is an estimator of $\theta$. The estimator is
+consistent if
+
+\[
+\boxed{
+\hat{\theta}_n
+\xrightarrow{P}
+\theta
+}
+\]
+
+as
+
+\[
+n\rightarrow\infty.
+\]
+
+This means that the probability that the estimator is far from the
+true parameter becomes very small as the sample size increases.
+
+\subsubsection*{Example}
+
+The sample mean $\bar{X}$ is a consistent estimator of the population
+mean $\mu$ under standard conditions.
+
+\subsubsection*{Simple Interpretation}
+
+\[
+\boxed{
+\text{More data}
+\quad\Longrightarrow\quad
+\text{Better estimate}
+\quad\Longrightarrow\quad
+\text{Closer to the true value}
+}
+\]
+\end{frame}
+
+\begin{frame}{Confidence Intervals}
+
+
+A \textbf{confidence interval (CI)} provides a range of plausible
+values for an unknown population parameter.In general,
+\vspace{0.0 cm}
+\[
+\boxed{
+\text{Confidence Interval}
+=
+\text{Estimate}
+\pm
+\text{Margin of Error}
+}
+\]
+
+\subsubsection*{Example}
+
+Suppose the estimated population mean is
+\vspace{0.0 cm}
+\[
+\bar{X}=50
+\]
+
+and the 95\% confidence interval is
+\vspace{0.0 cm}
+\[
+(46,54).
+\]
+\[ The\ interval\ is\ reported\ as:
+\boxed{46<\mu<54}
+\ using\ the\ stated\ 95\%\ confidence\ procedure.\]
+
+\begin{itemize}
+    \item 90\% , 95\% , 99\%
+
+\item A higher confidence level generally produces a wider confidence
+interval, assuming the other factors remain unchanged.
+\item A 95\% confidence procedure means that if samples were repeatedly
+taken and confidence intervals were constructed using the same method,
+approximately 95\% of those intervals would contain the true population
+parameter.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Parametric Model Estimation}
+
+
+A \textbf{parametric model} assumes that the population distribution
+belongs to a particular family described by a finite number of
+parameters.
+A normal distribution can be written as
+\vspace{0.0 cm}
+\[
+X\sim N(\mu,\sigma^2)
+\]
+
+where : $\mu$ - population mean , - $\sigma^2$ is the population variance.
+
+
+The objective of estimation is to estimate these unknown parameters
+using sample data.
+
+\subsubsection*{Common Parametric Models}
+
+\begin{itemize}
+    \item Normal distribution ,Binomial distribution , Poisson distribution and Exponential distribution
+\end{itemize}
+
+\subsubsection*{Maximum Likelihood Estimation}
+
+Maximum Likelihood Estimation (MLE) chooses the parameter value that
+maximizes the likelihood of observing the given data.
+
+The likelihood function is
+
+\[
+L(\theta)
+=
+\prod_{i=1}^{n}f(X_i;\theta).
+\]
+\end{frame}
+\begin{frame}
+The maximum likelihood estimator is
+
+\[
+\boxed{
+\hat{\theta}
+=
+\arg\max_{\theta}L(\theta)
+}
+\]
+
+\subsubsection*{Method of Moments}
+
+The \textbf{method of moments} estimates unknown parameters by
+equating sample moments with corresponding population moments.
+
+For example, the first sample moment is
+
+\[
+\frac{1}{n}\sum_{i=1}^{n}X_i,
+\]
+
+which is equated with the first population moment
+
+\[
+E[X].
+\]
+\end{frame}
+
+\begin{frame}{Non-Parametric Model Estimation}
+
+A \textbf{non-parametric model} does not assume that the population
+distribution belongs to a specific probability distribution.
+
+It makes fewer assumptions about the underlying population and estimates
+the distribution or its characteristics directly from the sample data.
+
+\vspace{0.2cm}
+
+The main idea is to allow the data to determine the shape of the
+underlying distribution.
+
+\subsubsection*{Common Non-Parametric Methods}
+
+\begin{itemize}
+    \item Empirical Distribution Function (EDF)
+    \item Kernel Density Estimation (KDE)
+    \item Rank-based estimation
+    \item Median and quantile estimation
+\end{itemize}
+
+
+\subsubsection*{Empirical Distribution Function}
+
+The \textbf{Empirical Distribution Function (EDF)} estimates the
+cumulative distribution function directly from the observed sample.
+\end{frame}
+
+
+\begin{frame}{Non-Parametric Model Estimation}
+
+For a sample $X_1,X_2,\ldots,X_n$, it is defined as
+
+\[
+\boxed{
+F_n(x)=
+\frac{1}{n}
+\sum_{i=1}^{n} I(X_i\leq x)
+}
+\]
+
+where $I(X_i\leq x)$ is the indicator function:
+
+\[
+I(X_i\leq x)=
+\begin{cases}
+1, & X_i\leq x\\
+0, & X_i>x
+\end{cases}
+\]
+
+The EDF gives the proportion of observations that are less than or
+equal to $x$.
+
+
+Consider the sample
+
+\[
+2,\;4,\;5,\;7,\;9
+\]
+
+For $x=5$, three observations are less than or equal to $5$.
+\end{frame}
+
+
+\begin{frame}{Non-Parametric Model Estimation}
+Therefore,
+
+\[
+F_n(5)=\frac{3}{5}=0.6
+\]
+
+Hence, approximately $60\%$ of the observations are less than or
+equal to $5$.
+
+\vspace{0.3cm}
+
+\subsubsection*{Kernel Density Estimation}
+
+\textbf{Kernel Density Estimation (KDE)} is used to estimate the
+probability density function without assuming a particular distribution.
+
+\[
+\boxed{
+\hat{f}_h(x)
+=
+\frac{1}{nh}
+\sum_{i=1}^{n}
+K\left(\frac{x-X_i}{h}\right)
+}
+\]
+
+where $h$ is the bandwidth and $K$ is the kernel function.
+
+
+\subsubsection*{Rank-Based Estimation}
+
+Non-parametric methods often use the \textbf{ranks} of observations
+instead of their actual numerical values.
+\end{frame}
+
+
+\begin{frame}{Non-Parametric Model Estimation}
+
+For example, consider
+\vspace{0.0 cm}
+\[
+25,\;10,\;40,\;15
+\]
+
+After arranging the observations:
+\vspace{0.0 cm}
+\[
+10,\;15,\;25,\;40
+\]
+
+Their ranks are:
+\vspace{0.0 cm}
+\[
+1,\;2,\;3,\;4
+\]
+
+Rank-based methods are useful when the underlying distribution is
+unknown or when the assumptions of parametric methods are not satisfied.
+
+\subsubsection*{Common Non-Parametric Tests}
+
+\begin{itemize}
+    \item Sign Test
+    \item Wilcoxon Signed-Rank Test
+    \item Mann--Whitney U Test
+    \item Kruskal--Wallis Test
+    \item Spearman's Rank Correlation
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Parametric vs Non-Parametric Estimation}
+
+\begin{center}
+\begin{tabular}{p{5.2cm}p{5.2cm}}
+\hline
+\textbf{Parametric} & \textbf{Non-Parametric}\\
+\hline
+
+Assumes a specific distribution &
+Makes fewer distributional assumptions \\
+
+Uses a fixed number of parameters &
+More flexible estimation \\
+
+Example: Normal distribution &
+Example: Empirical distribution \\
+
+MLE and Method of Moments &
+KDE and rank-based methods \\
+
+Less flexible &
+More flexible \\
+
+Efficient when assumptions are correct &
+More robust to distributional assumptions \\
+
+\hline
+\end{tabular}
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}{Conclusion}
+
+
+\item Descriptive statistics provides methods for organizing, summarizing,
+and presenting data, while frequentist statistics provides methods for
+making statistical inferences about populations using sample data.
+
+\item The important descriptive statistical concepts include histograms,
+sample mean, sample variance, order statistics, covariance and
+covariance matrices.
+\item Frequentist concepts include sampling, mean square
+error, consistency, confidence intervals, and parametric and
+non-parametric estimation.
+
+\item Together, these concepts form an important foundation for statistical
+data analysis and statistical inference.
+\end{frame}
+\begin{frame}
+    \centering
+    \vfill
+    {\Huge \textbf{Thank You!}}
+\end{frame}
+\end{document}
